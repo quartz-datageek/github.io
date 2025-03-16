@@ -6,7 +6,41 @@ baseurl: "" # Keep it empty for GitHub Pages
 url: "https://quartz-datageek.github.io" # Set your GitHub Pages URL
 
 # Theme Settings
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "default"
+
+# Site Settings
+locale: "en-US"
+title_separator: "-"
+subtitle: ""
+name: "Your Name"
+repository: "quartz-datageek/quartz-datageek.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+
+# Plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
